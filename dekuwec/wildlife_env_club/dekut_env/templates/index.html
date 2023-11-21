@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+    <title>Dekuwec</title>
+</head>
+
+<body>
+    <h1>welcome to dekuwec</h1>
+    <p>Dekuwec is a community of environmentalists keen on making the world a better place to live in through
+        environmental action.</p>
+    <h2>meeet our officials</h2>
+    <ul>
+        {% for x in officials %}
+        <li>
+            <img src="{{ x.pic.url }}">
+            {{x.firstname}}
+            {{x.lastname}}
+        </li>
+        {% endfor %}
+    </ul>
+    <button id="button">click me</button>
+    <img src="{% static 'chairman.webp' %}">
+
+    <script src="{% static 'myglobal.js' %}"></script>
+</body>
+
+</html>
